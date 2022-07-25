@@ -24,9 +24,6 @@ public class Role
     @Column(name = "role", unique = true)
     private String userRole;
 
-    @ManyToMany(mappedBy = "roles")
-    private Set<User> users;
-
     @Override
     public String getAuthority() {
         return userRole;
